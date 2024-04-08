@@ -4,5 +4,7 @@ import jakarta.validation.constraints.NotEmpty;
 
 import java.util.List;
 
-public record CreateTicketRequest(@NotEmpty List<LineRequest> lines) {
+import static lottery.ticket.utils.Constants.LINES_NOT_EMPTY_MESSAGE;
+
+public record CreateTicketRequest(@NotEmpty(message = LINES_NOT_EMPTY_MESSAGE) List<LineRequest> lines) {
 }
