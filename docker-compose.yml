@@ -3,7 +3,7 @@ services:
   service:
     build: .
     ports:
-      - 8080:8080
+      - 8081:8081
     environment:
       - JDBC_PASSWORD={DB_PASSWORD}
     depends_on:
